@@ -1,8 +1,8 @@
 class CreateGames < ActiveRecord::Migration
   def change
     create_table :games do |t|
-      t.string :winner
-      t.string :loser
+      t.integer :winner
+      t.integer :loser
       t.belongs_to :tournament_round
 
 
