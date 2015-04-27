@@ -3,7 +3,7 @@ class CreatePlayers < ActiveRecord::Migration
     create_table :players do |t|
       t.string :name
       t.integer :win_count, :default => 0
-      t.integer :game_id, :default => 0
+      t.belongs_to :game
 
       t.timestamps
     end

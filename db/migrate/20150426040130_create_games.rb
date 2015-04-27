@@ -3,7 +3,8 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
       t.string :winner
       t.string :loser
-      t.integer :tournament_round_id
+      t.belongs_to :tournament_round
+
 
       t.timestamps
     end
